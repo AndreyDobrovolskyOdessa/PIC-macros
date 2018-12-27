@@ -95,6 +95,30 @@ _OVRRAMBOTTOM	set _OVRRAMBOTTOM+(Size)
 	ENDM
 
 
+SelectIBank	MACRO Addr
+	IF (_RAMBANKTOTAL>2)
+	bankisel Addr
+	ENDIF
+	ENDM
+
+
+SetRAMPtr	MACRO Base,Index,SizeOf
+
+	LOCAL i
+
+	SelectIBank Base
+	movlw low(Base)
+i	= 0
+	WHILE (i<SizeOf)
+	addwf Index,W
+i	= i+1
+	ENDW
+	movwf FSR
+
+	ENDM
+
+
+
 ;	to be executed immediately after interrupt enrty
 
 SaveContext	MACRO
