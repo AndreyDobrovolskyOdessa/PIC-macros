@@ -29,6 +29,28 @@ and if you need port pins manipulation,
         #include "../pins.inc"
     
 ## Let's code!
-
+        #define ARRAY_SIZE d'10'
+        
+        ALLOC Sum,4
+        IALLOC Array,ARRAY_SIZE*2
+        ALLOC Cnt,1
+        
+        ; Some code changing Array values
+        ; Now we will sum all Array values with result in Sum
+        
+        movwl Sum,0             ; Sum = 0
+        movwl Sum+2,0
+        
+        SetRAMPtr Array,0,0     ; FSR = #Array
+        
+        movl Cnt,ARRAY_SIZE     ; Cnt = #ARRAY_SIZE
+        
+    Loop:
+    
+        addwi Sum,INDF,2        ; Sum += *(FSR += 2)
+        addcwl Sum+2,0
+        
+        djnz Cnt,Loop           ; if(( --Cnt) != 0 ) goto Loop
+        
 
 
