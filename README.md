@@ -31,13 +31,14 @@ and if you need port pins manipulation,
 ## Let's code!
         #define ARRAY_SIZE d'10'
         
-        ALLOC Sum,4
         IALLOC Array,ARRAY_SIZE*2
-        ALLOC Cnt,1
         
         ; Some code changing Array values
         ; Now we will sum all Array values with result in Sum
         
+        ALLOC Sum,4
+        ALLOC Cnt,1
+
         movwl Sum,0             ; Sum = 0
         movwl Sum+2,0
         
