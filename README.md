@@ -13,9 +13,9 @@ If you don't want to use relocatable RAM variables, and don't want to place them
 
 If you want to work with bits as with variables.
 
-If you need 2-, 4-, or higher arythmetics maybe with indirectly addressed variables.
+If you need multibyte arythmetics maybe with indirectly addressed variables.
 
-If you need to multiply/divide words/double-words.
+If you need to multiply/divide bytes/words/double-words.
 
 If you want to work with port pins as with variables, don't worrying of their interfering each other.
 
