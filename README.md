@@ -312,4 +312,30 @@ List of macros:
         DivW	MACRO DividedH,DividedL,Divider,ResultH,ResultL,Cnt,Bit15
         DivWRounding	MACRO Divided,Divider
 
+        ;	Pin handling macros
+        ClrPinBuf	MACRO pin
+        SetPinBuf	MACRO pin
+        CplPinBuf	MACRO pin
+        AndPinBuf	MACRO pin,bool
+        AndnotPinBuf	MACRO pin,bool
+        IorPinBuf	MACRO pin,bool
+        IornotPinBuf	MACRO pin,bool
+        XorPinBuf	MACRO pin,bool
+        XornotPinBuf	MACRO pin,bool
+        MovPinBuf	MACRO pin,bool
+        MovnotPinBuf	MACRO pin,bool
+        
+        WritePortBuffers	MACRO
+
+        ClrPin	MACRO pin
+        SetPin	MACRO pin
+        CplPin	MACRO pin
+        
+        SelectTRISBank	MACRO
+        UnselectTRISBank	MACRO
+        _TurnIn		MACRO pin
+        _TurnOut	MACRO pin
+        TurnIn	MACRO pin
+        TurnOut	MACRO pin
+        
 
