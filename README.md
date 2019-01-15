@@ -109,7 +109,7 @@ If a lot of pins are initialized, overhead may be eliminated.
         UnselectTRISBank
         
 
-List of macros:
+##List of macros:
 
         ;	1. RAM allocation macros.
         ALLOC	MACRO Name,Size
